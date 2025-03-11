@@ -8,5 +8,6 @@ cout<<"enter the numder and dispaly :";
 cin>>num;
 cout<<"you enterd :"<<num;
 cout<<"this is c++ files ";
+cout<<"\n git tutorial ";
 return 0;
 }
