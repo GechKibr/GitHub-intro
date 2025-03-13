@@ -1,4 +1,4 @@
-#include <iostrean>
+#include <iostream>
 using namespace std ;
 int main()
 {
