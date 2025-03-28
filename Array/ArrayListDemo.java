@@ -53,14 +53,20 @@ public class ArrayListDemo {
         
         String cccode;
         System.out.println("Enter the course code to  delete ");
-        cccode=scan.nextLine();
-        for(Course ccors:courses){
-             if(cccode.equals(ccors.getCourseCode()));
-                 {
-                 courses.remove(ccors);
-                 }
-             }
-        
+        String cccode = scan.nextLine();
+        Iterator<Course> iterator = courses.iterator();
+        boolean deleted = false;
+        while (iterator.hasNext()) {
+            Course ccors = iterator.next();
+            if (cccode.equals(ccors.getCourseCode())) {
+                iterator.remove();
+                deleted = true;
+                break;
+            }
+        }
+        if (!deleted) {
+            System.out.println("Course not found for deletion!");
+        }
         
          for(Course cour:courses){
              System.out.println(cour);
